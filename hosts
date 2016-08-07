@@ -1,0 +1,2 @@
+[wordpress]
+172.16.12.146 ansible_user=alan 

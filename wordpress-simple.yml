@@ -1,0 +1,16 @@
+- hosts: wordpress
+  become: yes
+  vars_files:
+    - vault/wordpress-simple.yml
+  roles:
+    - geerlingguy.apache
+    - role: linuxhq.ius
+      ius_repos:
+        ius: True
+    - geerlingguy.php
+    - geerlingguy.mysql
+    - geerlingguy.firewall
+    - geerlingguy.php-mysql 
+    - ansible-role-wordpress
+    - ansible-role-wordpress-apache
+    - sbaerlocher.wp-cli

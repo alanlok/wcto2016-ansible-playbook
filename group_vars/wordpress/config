@@ -1,0 +1,15 @@
+---
+apache_user: "apache"
+apache_group: "apache"
+wp_version: 4.5
+wp_site_name: 'site1'
+wp_install_dir: '/var/www/html/{{ wp_site_name }}'
+wp_db_name: '{{ wp_site_name }}'
+wp_db_user: '{{ wp_site_name }}_user'
+admin_db_user: 'root'
+wp_db_host: 'localhost'
+wp_apache_hostname: '{{ wp_site_name }}.vm'
+
+# We are going to install and use IUS
+php_enablerepo: 'ius'
+php_packages: [php56u, php56u-opcache, php56u-xml, php56u-mysqlnd, php56u-gd, php56u-pecl-apcu]
